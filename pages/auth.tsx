@@ -1,5 +1,4 @@
 import { useCallback, useState } from "react";
-import axios from 'axios'
 import Input from "../components/input";
 import { signIn } from "next-auth/react";
 import { FcGoogle } from 'react-icons/fc';
@@ -27,12 +26,17 @@ const Auth = () => {
 
     const register = useCallback(async () => {
         try {
-            console.log(email, userName, password);
-            await axios.post('/api/register', {
-                email,
-                userName,
-                password
-            })
+            await fetch('/api/register', {
+                method: "POst",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email,
+                    userName,
+                    password
+                })
+            });
             login();
         } catch (error) {
             console.log(error)

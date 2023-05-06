@@ -1,7 +1,6 @@
 import bcrypt from 'bcrypt';
 import { NextApiRequest, NextApiResponse } from 'next';
 import prismadb from '@/lib/prismadb';
-import { couldStartTrivia } from 'typescript';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     console.log(req.body)
