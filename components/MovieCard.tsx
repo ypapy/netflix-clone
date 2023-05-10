@@ -1,4 +1,4 @@
-import { MovieInterface } from "@/pages/types";
+import { MovieInterface } from "@/types";
 import { BsFillPlayFill } from 'react-icons/bs'
 import FavoriteButton from "./FavoriteButton";
 

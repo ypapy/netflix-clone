@@ -1,4 +1,4 @@
-import { MovieInterface } from '../pages/types'
+import { MovieInterface } from '../types'
 import { isEmpty } from 'lodash'
 import MovieCard from './MovieCard';
 interface MovieListProps {
